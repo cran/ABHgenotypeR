@@ -1,0 +1,27 @@
+Package: ABHgenotypeR
+Type: Package
+Title: Easy Visualization of ABH Genotypes
+Version: 1.0.0
+Date: 2016-01-21
+Authors@R: c(
+  person("Stefan", "Reuscher", email = "reuscher.stefan@gmail.com",
+  role = c("aut", "cre")),
+  person("Tomoyuki", "Furuta", role = "aut"))
+Description: Easy to use functions to visualize marker data
+    from biparental populations. Useful for both analyzing and
+    presenting genotypes in the ABH format.
+License: GPL-3
+URL: http://github.com/StefanReuscher/ABHgenotypeR
+BugReports: http://github.com/StefanReuscher/ABHgenotypeR/issues
+LazyData: TRUE
+Imports: ggplot2, reshape2
+RoxygenNote: 5.0.1
+Suggests: knitr, rmarkdown
+VignetteBuilder: knitr
+NeedsCompilation: no
+Packaged: 2016-01-21 03:39:37 UTC; Stefan
+Author: Stefan Reuscher [aut, cre],
+  Tomoyuki Furuta [aut]
+Maintainer: Stefan Reuscher <reuscher.stefan@gmail.com>
+Repository: CRAN
+Date/Publication: 2016-01-21 08:26:38

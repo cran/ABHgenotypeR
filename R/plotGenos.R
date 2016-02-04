@@ -48,7 +48,7 @@ plotGenos <- function(genos = "genotypes",
 
   ggt$chrom <- genos$chrom
   ggt$index <- 1:length(genos$chrom)
-  ggt$marker_names <- genos$marker_names
+  ggt$marker_names <- factor(genos$marker_names, levels = unique(genos$marker_names))
 
   ggt <- reshape2::melt(ggt,
                         id.vars = c("chrom", "index","marker_names"),
@@ -61,6 +61,9 @@ plotGenos <- function(genos = "genotypes",
   if(chromToPlot[1] != "all") ggt <- ggt[ggt$chrom %in% chromToPlot,]
 
   marker_names <- individual_names <- allele <- NULL #appease R cmd check
+
+  ggt$individual_names <- factor(ggt$individual_names,
+                                     levels = rev(levels(ggt$individual_names)))
 
   ggplot(ggt, aes(x = marker_names, y = individual_names,
                   fill = allele))+
